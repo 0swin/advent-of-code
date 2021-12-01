@@ -1,9 +1,9 @@
 // import input
-const fs = require("fs");
-const input = fs.readFileSync("input.txt", "utf8");
+const fs = require('fs');
+const input = fs.readFileSync('input.txt', 'utf8');
 
 // split the input into an array of strings
-const inputArray = input.split("\n");
+const inputArray = input.split('\n');
 
 // count number of currentMeasurements greater than previousMeasurements
 let previousMeasurement = 0;
