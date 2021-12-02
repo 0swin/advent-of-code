@@ -9,8 +9,8 @@ const inputArray = input.split('\n');
 let previousMeasurement = 0;
 let count = 0;
 
-for (let index = 0; index < inputArray.length; index++) {
-  let currentMeasurement = parseInt(inputArray[index - 1]) + parseInt(inputArray[index]) + parseInt(inputArray[index + 1]);
+for (let index = 1; index < inputArray.length; index++) {
+  let currentMeasurement = parseInt(inputArray[index]);
   if (currentMeasurement > previousMeasurement) {
     count++;
   }
