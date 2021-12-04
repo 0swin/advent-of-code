@@ -6,8 +6,8 @@ const input = fs.readFileSync('input.txt', 'utf8');
 const inputArray = input.split('\n');
 
 // define average as array with inputArray.lenght items set to 0
-let gamma = new Array(inputArray[0].length).fill(0);
-let epsilon = new Array(inputArray[0].length).fill(0);
+const gamma = new Array(inputArray[0].length).fill(0);
+const epsilon = new Array(inputArray[0].length).fill(0);
 
 // for each string in the array
 for (let i = 0; i < inputArray.length; i++) {
