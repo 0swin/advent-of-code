@@ -23,5 +23,5 @@ for (let index = 0; index < inputArray.length; index++) {
 console.log('Depth: ' + depth);
 console.log('Horizontal: ' + horizontal);
 
-let result = depth * horizontal;
+const result = depth * horizontal;
 console.log('Result: ' + result);

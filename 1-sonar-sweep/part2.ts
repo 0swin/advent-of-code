@@ -10,7 +10,7 @@ let previousMeasurement = 0;
 let count = 0;
 
 for (let index = 0; index < inputArray.length; index++) {
-  let currentMeasurement = parseInt(inputArray[index - 1]) + parseInt(inputArray[index]) + parseInt(inputArray[index + 1]);
+  const currentMeasurement = parseInt(inputArray[index - 1]) + parseInt(inputArray[index]) + parseInt(inputArray[index + 1]);
   if (currentMeasurement > previousMeasurement) {
     count++;
   }

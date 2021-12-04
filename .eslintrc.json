@@ -1,16 +1,17 @@
 {
-  "extends": ["plugin:prettier/recommended"],
+  "extends": [
+    "plugin:prettier/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier/@typescript-eslint",
+    "prettier"
+  ],
   "env": {
     "browser": true,
     "es6": true,
     "node": true
   },
-  "plugins": ["prettier"],
+  "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "ecmaVersion": 2018,
-    "sourceType": "module"
-  },
-  "rules": {
-    "prettier/prettier": "error"
+    "project": "./tsconfig.json"
   }
 }
