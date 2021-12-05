@@ -55,7 +55,7 @@ outer_loop: for (let draw = 0; draw < draws.length; draw++) {
   }
 }
 console.log(`Board ${solvedBoard + 1} is solved`);
-console.log(boardsInt[solvedBoard]);
+console.table(boardsInt[solvedBoard]);
 let unmarkedSum: number = 0;
 for (let rows = 0; rows < boardsInt[solvedBoard].length; rows++) {
   boardsInt[solvedBoard][rows].filter((x) => x !== -1);
