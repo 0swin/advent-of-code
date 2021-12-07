@@ -11,13 +11,13 @@
 
 <!--SOLUTIONS-->
 
-![Day](https://badgen.net/badge/01/%E2%98%86%E2%98%86/gray)
-![Day](https://badgen.net/badge/02/%E2%98%86%E2%98%86/gray)
-![Day](https://badgen.net/badge/03/%E2%98%86%E2%98%86/gray)
-![Day](https://badgen.net/badge/04/%E2%98%86%E2%98%86/gray)
-![Day](https://badgen.net/badge/05/%E2%98%86%E2%98%86/gray)
-![Day](https://badgen.net/badge/06/%E2%98%86%E2%98%86/gray)
-![Day](https://badgen.net/badge/07/%E2%98%86%E2%98%86/gray)
+[![Day](https://badgen.net/badge/01/%E2%98%85%E2%98%85/green)](src/day01)
+[![Day](https://badgen.net/badge/02/%E2%98%85%E2%98%85/green)](src/day02)
+[![Day](https://badgen.net/badge/03/%E2%98%85%E2%98%86/yellow)](src/day03)
+[![Day](https://badgen.net/badge/04/%E2%98%85%E2%98%86/yellow)](src/day04)
+[![Day](https://badgen.net/badge/05/%E2%98%85%E2%98%86/yellow)](src/day05)
+[![Day](https://badgen.net/badge/06/%E2%98%85%E2%98%86/yellow)](src/day06)
+[![Day](https://badgen.net/badge/07/%E2%98%85%E2%98%86/yellow)](src/day07)
 ![Day](https://badgen.net/badge/08/%E2%98%86%E2%98%86/gray)
 ![Day](https://badgen.net/badge/09/%E2%98%86%E2%98%86/gray)
 ![Day](https://badgen.net/badge/10/%E2%98%86%E2%98%86/gray)
@@ -69,51 +69,51 @@ npm start 1
 
 ```
 Day 01
-Time part 1: -
-Time part 2: -
-Both parts: -
+Time part 1: 0.226ms
+Time part 2: 0.521ms
+Both parts: 0.746416ms
 ```
 
 ```
 Day 02
-Time part 1: -
-Time part 2: -
-Both parts: -
+Time part 1: 0.892ms
+Time part 2: 0.379ms
+Both parts: 1.2705ms
 ```
 
 ```
 Day 03
-Time part 1: -
+Time part 1: 1.395ms
 Time part 2: -
-Both parts: -
+Both parts: 1.395375ms
 ```
 
 ```
 Day 04
-Time part 1: -
+Time part 1: 12.141ms
 Time part 2: -
-Both parts: -
+Both parts: 12.141458ms
 ```
 
 ```
 Day 05
-Time part 1: -
+Time part 1: 26.991ms
 Time part 2: -
-Both parts: -
+Both parts: 26.9915ms
 ```
 
 ```
 Day 06
-Time part 1: -
+Time part 1: 48.793ms
 Time part 2: -
-Both parts: -
+Both parts: 48.792834ms
 ```
 
 ```
 Day 07
-Time part 1: -
+Time part 1: 0.74ms
 Time part 2: -
-Both parts: -
+Both parts: 0.739509ms
 ```
 
 ```
@@ -243,8 +243,8 @@ Both parts: -
 ```
 
 ```
-Total stars: 0/50
-Total time: 0ms
+Total stars: 9/50
+Total time: 92.078ms
 ```
 
 <!--/RESULTS-->
