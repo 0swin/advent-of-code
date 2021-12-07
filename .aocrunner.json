@@ -5,10 +5,38 @@
   "days": [
     {
       "part1": {
-        "solved": false,
-        "result": null,
+        "solved": true,
+        "result": "1451",
         "attempts": [],
-        "time": null
+        "time": 0.225833
+      },
+      "part2": {
+        "solved": true,
+        "result": "1395",
+        "attempts": [],
+        "time": 0.520583
+      }
+    },
+    {
+      "part1": {
+        "solved": true,
+        "result": "1882980",
+        "attempts": [],
+        "time": 0.892
+      },
+      "part2": {
+        "solved": true,
+        "result": "1971232560",
+        "attempts": [],
+        "time": 0.3785
+      }
+    },
+    {
+      "part1": {
+        "solved": true,
+        "result": "2743844",
+        "attempts": [],
+        "time": 1.395375
       },
       "part2": {
         "solved": false,
@@ -19,10 +47,10 @@
     },
     {
       "part1": {
-        "solved": false,
-        "result": null,
+        "solved": true,
+        "result": "16674",
         "attempts": [],
-        "time": null
+        "time": 12.141458
       },
       "part2": {
         "solved": false,
@@ -33,10 +61,10 @@
     },
     {
       "part1": {
-        "solved": false,
-        "result": null,
+        "solved": true,
+        "result": "7297",
         "attempts": [],
-        "time": null
+        "time": 26.9915
       },
       "part2": {
         "solved": false,
@@ -47,38 +75,10 @@
     },
     {
       "part1": {
-        "solved": false,
-        "result": null,
+        "solved": true,
+        "result": "376194",
         "attempts": [],
-        "time": null
-      },
-      "part2": {
-        "solved": false,
-        "result": null,
-        "attempts": [],
-        "time": null
-      }
-    },
-    {
-      "part1": {
-        "solved": false,
-        "result": null,
-        "attempts": [],
-        "time": null
-      },
-      "part2": {
-        "solved": false,
-        "result": null,
-        "attempts": [],
-        "time": null
-      }
-    },
-    {
-      "part1": {
-        "solved": false,
-        "result": null,
-        "attempts": [],
-        "time": null
+        "time": 48.792834
       },
       "part2": {
         "solved": false,
