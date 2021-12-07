@@ -2,59 +2,51 @@ import run from 'aocrunner';
 
 const parseInput = (rawInput: string) => rawInput;
 
-const part1 = (rawInput: string) => {
-  const input = parseInput(rawInput);
-  let fishes = input.split(',').map((x) => parseInt(x));
+const solution = (days: number) => (rawInput: string) => {
+  const input = parseInput(rawInput)
+    .split(',')
+    .map((x) => parseInt(x));
+  let fishes = Array(9).fill(0);
 
-  let days = 80;
-  let newborns = 0;
+  input.forEach((x) => fishes[x]++);
+  console.log(fishes);
 
-  function calcDay(
-    fishes: number[],
-    prevNewborns: number,
-    days: number,
-  ): number[] {
-    let newborns = 0;
-    if (days === 0) return fishes;
-    fishes = fishes
-      .map((x) => {
-        let temp = x - 1;
-        if (temp === 0) newborns++;
-        return temp === -1 ? 6 : temp;
-      })
-      .concat(Array(prevNewborns).fill(8));
-    console.log(fishes.length);
-
-    return calcDay(fishes, newborns, days - 1);
+  for (let i = 0; i < days; i++) {
+    let temp = fishes[0];
+    fishes[0] = fishes[1];
+    fishes[1] = fishes[2];
+    fishes[2] = fishes[3];
+    fishes[3] = fishes[4];
+    fishes[4] = fishes[5];
+    fishes[5] = fishes[6];
+    fishes[6] = fishes[7] + temp;
+    fishes[7] = fishes[8];
+    fishes[8] = temp;
   }
 
-  return calcDay(fishes, newborns, days).length;
+  return `${fishes.reduce((a, b) => a + b, 0)}`;
 };
 
-const part2 = (rawInput: string) => {
-  const input = parseInput(rawInput);
-
-  return;
-};
+const testInput = `3,4,3,1,2`;
 
 run({
   part1: {
     tests: [
-      // {
-      //   input: ``,
-      //   expected: "",
-      // },
+      {
+        input: testInput,
+        expected: '5934',
+      },
     ],
-    solution: part1,
+    solution: solution(80),
   },
   part2: {
     tests: [
-      // {
-      //   input: ``,
-      //   expected: "",
-      // },
+      {
+        input: testInput,
+        expected: '26984457539',
+      },
     ],
-    solution: part2,
+    solution: solution(256),
   },
   trimTestInputs: true,
   onlyTests: false,
