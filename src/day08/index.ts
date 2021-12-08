@@ -19,7 +19,7 @@ const part1 = (rawInput: string) => {
 
   console.log(length);
 
-  return `${length[1] + length[2] + length[3] + length[6]}`;
+  return length[1] + length[2] + length[3] + length[6];
 };
 
 const part2 = (rawInput: string) => {
@@ -46,17 +46,17 @@ run({
     tests: [
       {
         input: testInput,
-        expected: '26',
+        expected: 26,
       },
     ],
     solution: part1,
   },
   part2: {
     tests: [
-      // {
-      //   input: ``,
-      //   expected: "",
-      // },
+      {
+        input: testInput,
+        expected: 61229,
+      },
     ],
     solution: part2,
   },
