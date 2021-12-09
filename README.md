@@ -4,6 +4,7 @@
 [![Node](https://badgen.net/badge/Node/v16.13.0+/blue)](https://nodejs.org/en/download/)
 ![Language](https://badgen.net/badge/Language/TypeScript/blue)
 [![Template](https://badgen.net/badge/Template/aocrunner/blue)](https://github.com/caderek/aocrunner)
+[![CodeFactor](https://www.codefactor.io/repository/github/0swin/advent-of-code/badge)](https://www.codefactor.io/repository/github/0swin/advent-of-code)
 
 # 🎄 Advent of Code 2021 🎄
 
