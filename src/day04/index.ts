@@ -4,14 +4,14 @@ const parseInput = (rawInput: string) => rawInput;
 
 const part1 = (rawInput: string) => {
   const input = parseInput(rawInput).split('\n\n');
-  let draws = input[0].split(',').map((x) => parseInt(x));
+  const draws = input[0].split(',').map((x) => parseInt(x));
 
   // convert draws from string to array of numbers
-  let boardsStr = input.map((board) => board.split('\n'));
+  const boardsStr = input.map((board) => board.split('\n'));
   boardsStr.shift();
 
   // for each board in boards, convert to array of arrays of numbers
-  let boardsInt = boardsStr.map((board) =>
+  const boardsInt = boardsStr.map((board) =>
     board.map((row) =>
       row
         .split(' ')
@@ -20,8 +20,8 @@ const part1 = (rawInput: string) => {
     ),
   );
 
-  let solvedBoard: number = 0;
-  let latestDraw: number = 0;
+  let solvedBoard = 0;
+  let latestDraw = 0;
   // for each drawn number
   outer_loop: for (let draw = 0; draw < draws.length; draw++) {
     // for each board
@@ -62,7 +62,7 @@ const part1 = (rawInput: string) => {
   }
   console.log(`Board ${solvedBoard + 1} is solved`);
   console.table(boardsInt[solvedBoard]);
-  let unmarkedSum: number = 0;
+  let unmarkedSum = 0;
   for (let rows = 0; rows < boardsInt[solvedBoard].length; rows++) {
     boardsInt[solvedBoard][rows].filter((x) => x !== -1);
     boardsInt[solvedBoard][rows]
