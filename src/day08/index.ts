@@ -3,14 +3,14 @@ import run from 'aocrunner';
 const parseInput = (rawInput: string) => rawInput;
 
 const part1 = (rawInput: string) => {
-  let input = parseInput(rawInput)
+  const input = parseInput(rawInput)
     .split('\n')
     .map((line) => line.split(' | ')[1].split(' '));
 
   // .forEach((line) => line.split(' | ')[1]);
   console.log(input);
 
-  let length = Array(8).fill(0);
+  const length = Array(8).fill(0);
   input.forEach((line) => {
     line.forEach((word) => {
       length[word.length - 1]++;
