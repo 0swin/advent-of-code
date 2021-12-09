@@ -6,13 +6,13 @@ const solution = (days: number) => (rawInput: string) => {
   const input = parseInput(rawInput)
     .split(',')
     .map((x) => parseInt(x));
-  let fishes = Array(9).fill(0);
+  const fishes = Array(9).fill(0);
 
   input.forEach((x) => fishes[x]++);
   console.log(fishes);
 
   for (let i = 0; i < days; i++) {
-    let temp = fishes[0];
+    const temp = fishes[0];
     fishes[0] = fishes[1];
     fishes[1] = fishes[2];
     fishes[2] = fishes[3];

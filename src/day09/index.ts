@@ -8,7 +8,7 @@ const part1 = (rawInput: string) => {
     .map((row) => row.split('').map((col) => parseInt(col)));
 
   console.table(input);
-  let lowpoints: number[] = [];
+  const lowpoints: number[] = [];
 
   for (let row = 0; row < input.length; row++) {
     for (let col = 0; col < input[row].length; col++) {

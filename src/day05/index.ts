@@ -20,14 +20,14 @@ const part1 = (rawInput: string) => {
       gridSize = Math.max(gridSize, x[0]);
     });
   }
-  let grid = Array(gridSize)
+  const grid = Array(gridSize)
     .fill(0)
     .map(() => Array(gridSize).fill(0));
 
   // Trace lines
   for (let line = 0; line < lines.length; line++) {
-    let start = lines[line][0];
-    let end = lines[line][1];
+    const start = lines[line][0];
+    const end = lines[line][1];
 
     if (start[0] === end[0]) {
       // vertical line
