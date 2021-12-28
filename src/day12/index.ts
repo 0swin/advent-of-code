@@ -20,7 +20,7 @@ const part1 = (rawInput: string) => {
       graph[to].push(from);
       return { from, to };
     });
-  console.log(graph);
+  // console.log(graph);
 
   // function to check if cave is small
   function isSmallCave(string: string) {
@@ -48,28 +48,78 @@ const part1 = (rawInput: string) => {
 
   const paths: string[] = [];
   depthFirstSearch('start', [], paths);
-  console.log(paths, paths.length);
+  console.log(paths.length);
 
   return paths.length;
 };
 
 const part2 = (rawInput: string) => {
-  const input = parseInput(rawInput);
+  let graph: { from: string; to: string }[] = [];
 
-  return;
+  // process input and make graph that lists for each node all the connected node
+  const input = parseInput(rawInput)
+    .split('\n')
+    .map((x) => {
+      let [from, to] = x.split('-');
+      if (!graph[from]) {
+        graph[from] = [];
+      }
+      if (!graph[to]) {
+        graph[to] = [];
+      }
+      graph[from].push(to);
+      graph[to].push(from);
+      return { from, to };
+    });
+  // console.log(graph);
+
+  // function to check if cave is small
+  function isSmallCave(string: string) {
+    return string === string.toLowerCase();
+  }
+
+  // Depth First Search algorithm
+  function depthFirstSearch(
+    node: string,
+    visited: string[],
+    visitedTwiceAlready: boolean,
+    paths: string[] = [],
+  ) {
+    visited.push(node);
+    if (node === 'end') {
+      paths.push(visited.join(','));
+      return;
+    }
+    for (const neighbour of graph[node]) {
+      if (neighbour === 'start') {
+        continue;
+      }
+      if (isSmallCave(neighbour) && visited.includes(neighbour)) {
+        if (visitedTwiceAlready) continue;
+        if (visited.filter((x) => x === neighbour).length >= 2) continue;
+        depthFirstSearch(neighbour, [...visited], true, paths);
+      } else {
+        depthFirstSearch(neighbour, [...visited], visitedTwiceAlready, paths);
+      }
+    }
+  }
+
+  const paths: string[] = [];
+  depthFirstSearch('start', [], false, paths);
+  console.log(paths);
+  console.log(paths.length);
+
+  return paths.length;
 };
 
 const testInput = `
-  dc-end
-  HN-start
-  start-kj
-  dc-start
-  dc-HN
-  LN-dc
-  HN-end
-  kj-sa
-  kj-HN
-  kj-dc
+  start-A
+  start-b
+  A-c
+  A-b
+  b-d
+  A-end
+  b-end
 `;
 
 run({
@@ -77,17 +127,17 @@ run({
     tests: [
       {
         input: testInput,
-        expected: 19,
+        expected: 10,
       },
     ],
     solution: part1,
   },
   part2: {
     tests: [
-      // {
-      //   input: ``,
-      //   expected: "",
-      // },
+      {
+        input: testInput,
+        expected: 36,
+      },
     ],
     solution: part2,
   },
